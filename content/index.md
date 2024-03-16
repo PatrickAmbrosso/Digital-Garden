@@ -1,6 +1,11 @@
 ---
-title: Welcome to Quartz
+title: 👋 Welcome to the AmbrOS
+description: Landing page for AmbrOS
+aliases:
+  - home
+tags:
+  - MOC
+publish: true
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+Hey there, I'm Patrick Ambrose and these are my personal notes.
