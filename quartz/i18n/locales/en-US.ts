@@ -22,12 +22,12 @@ export default {
       quote: "Quote",
     },
     backlinks: {
-      title: "Backlinks",
-      noBacklinksFound: "No backlinks found",
+      title: "Narrative Links",
+      noBacklinksFound: "No related narratives",
     },
     themeToggle: {
-      lightMode: "Light mode",
-      darkMode: "Dark mode",
+      lightMode: "Light Mode",
+      darkMode: "Night Mode",
     },
     explorer: {
       title: "Explorer",
@@ -36,7 +36,7 @@ export default {
       createdWith: "Created with",
     },
     graph: {
-      title: "Graph View",
+      title: "Map of the Odyssey",
     },
     recentNotes: {
       title: "Recent Notes",
@@ -51,7 +51,7 @@ export default {
       searchBarPlaceholder: "Search for something",
     },
     tableOfContents: {
-      title: "Table of Contents",
+      title: "Atlas of Contents",
     },
     contentMeta: {
       readingTime: ({ minutes }) => `${minutes} min read`,
@@ -59,12 +59,12 @@ export default {
   },
   pages: {
     rss: {
-      recentNotes: "Recent notes",
+      recentNotes: "Recent Endeavours",
       lastFewNotes: ({ count }) => `Last ${count} notes`,
     },
     error: {
-      title: "Not Found",
-      notFound: "Either this page is private or doesn't exist.",
+      title: "Welp! Page Not Found",
+      notFound: "I mean either this page is private or it doesn't exist (yet?).",
     },
     folderContent: {
       folder: "Folder",
