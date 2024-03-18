@@ -25,6 +25,8 @@ export default ((opts?: Options) => {
             </li>
           ))}
         </ul>
+        <br />
+        <hr />
       </footer>
     )
   }
