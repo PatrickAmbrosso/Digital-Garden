@@ -5,7 +5,6 @@ tags:
 publish: true
 ---
 
-
 Ansible follows a client-server architecture, but it's important to note that Ansible is agentless, meaning it doesn't require any software agents to be installed on the nodes managed by ansible. 
 
 ## Send Nodes
