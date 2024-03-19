@@ -1,5 +1,5 @@
 ---
-title: The Linux Operating System
+title: The Linux OS
 description: About the Free and Open Source Linux operatubng
 tags: 
 publish: true
