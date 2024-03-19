@@ -10,7 +10,7 @@ publish: true
 
 **SSH (pronounced ESS-ESS-HEICH)** stands for **Secure Shell**. It is a *cryptographic network protocol* that provides a *secure* and *encrypted* way to *access and manage remote devices* over an unsecured network, such as the internet. SSH allows users to securely log into remote systems and execute commands, transfer files, and perform other network services.
 
-The primary purpose of SSH is to establish a secure and authenticated connection between a client and a server. It provides *confidentiality*, *integrity*, and *authenticity* of data transmitted between the client and server through strong encryption and cryptographic techniques.
+The primary purpose of SSH is to establish a *secure* and *authenticated* connection between a client and a server. It provides *confidentiality*, *integrity*, and *authenticity* of data transmitted between the client and server through strong *encryption* and *cryptographic techniques*.
 
 Here are some *key features and characteristics* of the SSH protocol
 1. **Encryption** - SSH encrypts all communication between the client and server, ensuring that sensitive data, including login credentials, commands, and file transfers, cannot be intercepted or read by unauthorized parties.
@@ -22,18 +22,22 @@ Here are some *key features and characteristics* of the SSH protocol
 
 **OpenSSH** is an *open-source implementation of the SSH protocol* suite. It provides both the *server-side (sshd)* and *client-side (ssh)* components, offering secure remote login, encrypted file transfers, and secure tunneling capabilities. OpenSSH is the *most widely used* and commonly recommended implementation of SSH due to its security, reliability, and extensive feature set.
 
-OpenSSH is actively maintained and developed by a team of dedicated contributors. [Its source code is open and available for inspection](https://github.com/openssh), which allows for community involvement, code audits, and continuous improvement.
+OpenSSH is actively maintained and developed by a team of dedicated contributors. [Its source code is open and available for inspection](https://github.com/openssh), which allows for community involvement, code audits, and continuous improvement. Due to its security, flexibility, and wide adoption, OpenSSH has become the de facto standard for SSH implementations in many environments. It is extensively used by system administrators, network engineers, developers, and security-conscious individuals for secure remote administration and file transfer tasks.
 
-Due to its security, flexibility, and wide adoption, OpenSSH has become the de facto standard for SSH implementations in many environments. It is extensively used by system administrators, network engineers, developers, and security-conscious individuals for secure remote administration and file transfer tasks.
-
-
-> [!info] Implementation of the SSH Protocol
-> To clarify once again, OpenSSH is the open-source implementation of the SSH protocol. OpenSSH offers a robust and extensive feature set that aligns with the SSH protocol's capabilities.
-
+## Get up and Running with SSH
 
 1. [Fundamentals of SSH](./Learning%20SSH/01%20Fundamentals%20of%20SSH.md) - The Basics, History of SSH
 2. [Setting up SSH Server and SSH Client](./Learning%20SSH/02%20Setting%20up%20SSH%20Server%20and%20SSH%20Client.md) - Getting SSH installed on your Machine.
 
+## Common SSH Workflows
+
+
+
+## Resources
+
+1. Website - [OpenSSH Website](https://www.openssh.com/)
+2. GitHub Account - [OpenSSH on GitHub](https://github.com/openssh)
+3. Reddit SSH Community - [r/ssh](https://www.reddit.com/r/ssh/)
 
 ---
 SSH Architecture and Components
