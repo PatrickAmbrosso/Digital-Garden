@@ -1,5 +1,5 @@
 ---
-title: Fundamentals of SSH
+title: The Fundamentals
 description: 
 tags: 
 publish: true
