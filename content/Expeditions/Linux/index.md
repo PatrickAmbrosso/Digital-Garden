@@ -10,19 +10,19 @@ publish: true
 
 ## Learning Roadmap
 
-- **[01 Introduction to Linux](01%20Introduction%20to%20Linux.md)**
-	- [History and Evolution of Linux](01%20Introduction%20to%20Linux.md#History%20and%20Evolution%20of%20Linux) - Provides an overview of how Linux originated and evolved over time.
-	- [Understanding what Linux is](01%20Introduction%20to%20Linux.md#Understanding%20what%20Linux%20is) - Explains the basic principles and components of the Linux operating system.
-	- [Why Use Linux?](01%20Introduction%20to%20Linux.md#Why%20Use%20Linux?) - Highlights the advantages of using Linux compared to other operating systems.
-	- [Who uses Linux?](01%20Introduction%20to%20Linux.md#Who%20uses%20Linux?) - Showcases the wide range of devices that Linux can run on and the use cases it serves.
-	- [How is Linux Different from other Operating Systems](01%20Introduction%20to%20Linux.md#How%20is%20Linux%20Different%20from%20other%20Operating%20Systems) - Discusses the fundamental differences between Linux and other popular operating systems.
-	- [Linux and the Open Source Philosophy](01%20Introduction%20to%20Linux.md#Linux%20and%20the%20Open%20Source%20Philosophy) - Dives into the world of open source and its contributions to Linux.
-- **[Getting Started with Linux](Getting%20Started%20with%20Linux.md)**
-	- [Installing Linux - A Step-by-Step Guide](Getting%20Started%20with%20Linux.md#Installing%20Linux%20-%20A%20Step-by-Step%20Guide) - Walks through the process of installing Linux on a system, including considerations for different hardware architectures and boot methods.
-	- [Understanding Linux Filesystem Hierarchy](Getting%20Started%20with%20Linux.md#Understanding%20Linux%20Filesystem%20Hierarchy) - Provides an overview of the directory structure used in Linux and the purpose of each directory.
-	- [Navigating the Command Line Interface](Getting%20Started%20with%20Linux.md#Navigating%20the%20Command%20Line%20Interface) - Introduces basic command-line navigation and manipulation techniques.
-	- [Basic Linux Commands and Utilities](Getting%20Started%20with%20Linux.md#Basic%20Linux%20Commands%20and%20Utilities) - Covers essential commands and utilities for performing common tasks in the Linux terminal.
-	- [Managing Users and Permissions](Getting%20Started%20with%20Linux.md#Managing%20Users%20and%20Permissions) - Explains how to create and manage user accounts and set permissions for files and directories.
+- **[Introduction to Linux](./01%20Introduction%20to%20Linux.md)**
+	- [History and Evolution of Linux](./01%20Introduction%20to%20Linux.md#History%20and%20Evolution%20of%20Linux) - Provides an overview of how Linux originated and evolved over time.
+	- [Understanding what Linux is](./01%20Introduction%20to%20Linux.md#Understanding%20what%20Linux%20is) - Explains the basic principles and components of the Linux operating system.
+	- [Why Use Linux?](./01%20Introduction%20to%20Linux.md#Why%20Use%20Linux?) - Highlights the advantages of using Linux compared to other operating systems.
+	- [Who uses Linux?](./01%20Introduction%20to%20Linux.md#Who%20uses%20Linux?) - Showcases the wide range of devices that Linux can run on and the use cases it serves.
+	- [How is Linux Different from other Operating Systems](./01%20Introduction%20to%20Linux.md#How%20is%20Linux%20Different%20from%20other%20Operating%20Systems) - Discusses the fundamental differences between Linux and other popular operating systems.
+	- [Linux and the Open Source Philosophy](./01%20Introduction%20to%20Linux.md#Linux%20and%20the%20Open%20Source%20Philosophy) - Dives into the world of open source and its contributions to Linux.
+- **[Getting Started with Linux](./02%20Getting%20Started%20with%20Linux.md)**
+	- [Installing Linux - A Step-by-Step Guide](./02%20Getting%20Started%20with%20Linux.md#Installing%20Linux%20-%20A%20Step-by-Step%20Guide) - Walks through the process of installing Linux on a system, including considerations for different hardware architectures and boot methods.
+	- [Understanding Linux Filesystem Hierarchy](./02%20Getting%20Started%20with%20Linux.md#Understanding%20Linux%20Filesystem%20Hierarchy) - Provides an overview of the directory structure used in Linux and the purpose of each directory.
+	- [Navigating the Command Line Interface](./02%20Getting%20Started%20with%20Linux.md#Navigating%20the%20Command%20Line%20Interface) - Introduces basic command-line navigation and manipulation techniques.
+	- [Basic Linux Commands and Utilities](./02%20Getting%20Started%20with%20Linux.md#Basic%20Linux%20Commands%20and%20Utilities) - Covers essential commands and utilities for performing common tasks in the Linux terminal.
+	- [Managing Users and Permissions](./02%20Getting%20Started%20with%20Linux.md#Managing%20Users%20and%20Permissions) - Explains how to create and manage user accounts and set permissions for files and directories.
 - [Working with Different Linux Distributions](Working%20with%20Different%20Linux%20Distributions.md)
 	- [Linux comes in Distributions](Linux%20comes%20in%20Distributions.md) - Discusses about Linux Distributions, they why and the purpose for such an approach. 
 	- [Overview of Popular Linux Distributions](Overview%20of%20Popular%20Linux%20Distributions.md) - Provides an overview of popular Linux distributions, including their characteristics and use cases.
