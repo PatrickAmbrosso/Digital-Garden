@@ -1,5 +1,5 @@
 ---
-title: Introduction to Linux
+title: Introduction
 description: 
 tags: 
 publish: true
