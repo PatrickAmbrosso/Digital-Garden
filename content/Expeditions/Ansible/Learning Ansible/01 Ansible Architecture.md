@@ -1,5 +1,5 @@
 ---
-title: 01 Ansible Architecture
+title: Ansible Architecture
 description: 
 tags: 
 publish: true
