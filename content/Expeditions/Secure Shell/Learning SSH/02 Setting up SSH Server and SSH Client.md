@@ -1,5 +1,5 @@
 ---
-title: Setting up SSH Server and SSH Client
+title: Setting up SSH
 description: 
 tags: 
 publish: true
