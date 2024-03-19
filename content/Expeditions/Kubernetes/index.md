@@ -6,7 +6,6 @@ tags:
   - MOC
 publish: true
 ---
-
 Kubernetes, often abbreviated as **K8s**, is a popular *open-source* *container orchestration* platform that automates the *deployment*, *scaling*, and *management* of *containerized applications*. Originally *developed by Google*, it has gained widespread adoption due to its ability to simplify the complexities of containerized environments. At its core, Kubernetes provides a framework for *automating* the *deployment and scaling* of application containers across *clusters of hosts*. It abstracts away the underlying infrastructure, allowing developers to focus on building and deploying applications without worrying about the intricacies of the infrastructure.
 
 Kubernetes operates based on a master-node architecture, where the *master node*, which is now termed as the *control plane* manages the overall cluster and coordinates communication with worker nodes. *Worker nodes*, on the other hand, host the containers (in units called pods) and execute the tasks assigned by the master. Kubernetes supports features like automatic load balancing, rolling updates, and self-healing, making it a powerful tool for managing containerized workloads at scale.
