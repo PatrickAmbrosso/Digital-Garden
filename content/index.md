@@ -8,7 +8,6 @@ tags:
 publish: true
 ---
 
-
 Welcome to **Odysseus Ambrosia (Οδυσσέας Αμβροσία)**, a digital garden designed to be a sanctuary of knowledge, creativity, and inspiration. The name "*Odysseus Ambrosia*" encapsulates the essence of our journey towards enlightenment and the nourishment of our minds and souls.
 
 ## What is this about?
