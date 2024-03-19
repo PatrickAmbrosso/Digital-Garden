@@ -30,6 +30,11 @@ Due to its security, flexibility, and wide adoption, OpenSSH has become the de f
 > [!info] Implementation of the SSH Protocol
 > To clarify once again, OpenSSH is the open-source implementation of the SSH protocol. OpenSSH offers a robust and extensive feature set that aligns with the SSH protocol's capabilities.
 
+## Get up and Running with SSH
+
+1. [Fundamentals of SSH](./Learning%20SSH/01%20Fundamentals%20of%20SSH.md) - The Basics, History of SSH
+2. [Setting up SSH Server and SSH Client](./Learning%20SSH/02%20Setting%20up%20SSH%20Server%20and%20SSH%20Client.md) - Getting SSH installed on your Machine.
+
 ---
 SSH Architecture and Components
 Understanding the architecture and components of SSH helps in comprehending how SSH connections are established, authenticated, and secured. It forms the basis for configuring and managing SSH connections, key pairs, and authentication methods.
