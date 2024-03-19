@@ -1,5 +1,5 @@
 ---
-title: Getting Started with Linux
+title: Getting Started
 description: 
 tags: 
 publish: true
