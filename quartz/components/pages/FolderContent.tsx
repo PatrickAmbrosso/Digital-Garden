@@ -47,22 +47,25 @@ export default ((opts?: Partial<FolderContentOptions>) => {
 
     return (
       <div class={classes}>
-        {/* <div class="page-listing">
-          {options.showFolderCount && (
-            <p>
-              {i18n(cfg.locale).pages.folderContent.itemsUnderFolder({
-                count: allPagesInFolder.length,
-              })}
-            </p>
-          )}
-          <div>
-            <PageList {...listProps} />
+        {content ? (
+          <article>
+            <p>{content}</p>
+          </article>
+        ) : (
+          <div class="page-listing">
+            {options.showFolderCount && (
+              <p>
+                {i18n(cfg.locale).pages.folderContent.itemsUnderFolder({
+                  count: allPagesInFolder.length,
+                })}
+              </p>
+            )}
+            <div>
+              <PageList {...listProps} />
+            </div>
           </div>
-        </div>
-        <hr /> */}
-        <article>
-          <p>{content}</p>
-        </article>
+        )}
+        <hr />
       </div>
     )
   }
