@@ -10,7 +10,7 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
     <h1 class={`page-title ${displayClass ?? ""}`}>
       <img src={baseDir+"/static/site-logo.jpg"} alt="Logo" width="100%" height="auto" style={{ marginBottom: '10px' }} />
       <a href={baseDir}>{title}</a>
-      <hr style={{ marginTop: '1rem' }} />
+      {/* <hr style={{ marginTop: '1rem' }} /> */}
     </h1>
   )
 }
