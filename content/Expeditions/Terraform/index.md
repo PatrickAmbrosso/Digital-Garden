@@ -54,7 +54,7 @@ Terraform by is an [Infrastructure as Code](Infrastructure%20as%20Code.md) tool 
 
 ### Terraform Architecture
 
-
+![Terraform-Architecture.png](../../attachments/Terraform-Architecture.png)
 
 1. **Terraform Configuration Files (.tf)**
     - Configuration files are written in *HashiCorp Configuration Language (HCL)* which is similar to JSON.
