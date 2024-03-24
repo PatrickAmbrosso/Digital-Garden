@@ -34,9 +34,6 @@ Explore the "Map of the Odyssey," a structured knowledge graph that organizes in
 
 But wait, there's more. You could also expect to find philosophical thinking, health, lifestyle, and other thought-provoking topics. Each page might have a section called "Narrative Links," connecting threads of wisdom from diverse sources, much like the threads woven by Penelope as she awaited Odysseus's return.
 
-|                           Sections of the Odysseus Ambrosia                            |
-| :------------------------------------------------------------------------------------: |
-| [Musings](./Musings.md) \| [Expeditions](./Expeditions.md) \| [Reflections](./Reflections.md) \| [Showcase](./Showcase.md) \| [Transcendence](./Transcendence.md) |
 
 Whether you're a technologist seeking insights, an enthusiast of Greek mythology, or simply curious about the intersection of knowledge and creativity, Odysseus Ambrosia invites you to partake in a feast of ideas and exploration.
 ## Who am I?
