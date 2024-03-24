@@ -1,11 +1,8 @@
 ---
 title: Terraform
-description: About Terraform, the Infrastructure as Code (IaC) platform from Hashicorp
+description: About Terraform, the Infrastructure as Code (IaC) platform
 tags: 
 publish: true
-slug: terraform
-cssclass:
-  - hide-metadata
 ---
 
 Terraform by is an [Infrastructure as Code](Infrastructure%20as%20Code.md) tool offering by [HashiCorp](HashiCorp.md) for building, changing and versioning infrastructure safely and efficiently. It enables application software best practices to infrastructure. It is *provider agnostic* and is compatible with a multitude of cloud providers and services. Terraform uses declarative configuration files written in *HashiCorp Configuration Language* or *HCL* which is like JSON, but with additional features.
@@ -54,7 +51,7 @@ Terraform by is an [Infrastructure as Code](Infrastructure%20as%20Code.md) tool 
 
 ### Terraform Architecture
 
-![Terraform-Architecture.png](../../attachments/Terraform-Architecture.png)
+![](https://patfolio-assets.s3.ap-south-1.amazonaws.com/Terraform-Architecture.png)
 
 1. **Terraform Configuration Files (.tf)**
     - Configuration files are written in *HashiCorp Configuration Language (HCL)* which is similar to JSON.
