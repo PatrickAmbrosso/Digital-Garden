@@ -1,6 +1,6 @@
 ---
 title: Terraform
-description: About Terraform, the Infrastructure as Code (IaC) platform from Hashicorp
+description: About Terraform, the Infrastructure as Code (IaC) platform
 tags: 
 publish: true
 ---
