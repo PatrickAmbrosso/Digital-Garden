@@ -1,5 +1,5 @@
 ---
-title: 🏛️ Welcome to the Odyssey
+title: 👋 Welcome to the Odyssey
 description: The starting point of the Odysseus Ambrosia
 aliases:
   - home
