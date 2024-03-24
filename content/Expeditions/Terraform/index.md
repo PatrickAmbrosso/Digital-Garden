@@ -1,6 +1,6 @@
 ---
 title: Terraform
-description: About Terraform, the Infrastructure as Code (IaC) platform
+description: About Terraform, the Infrastructure as Code (IaC) platform from Hashicorp
 tags: 
 publish: true
 slug: terraform
@@ -54,7 +54,7 @@ Terraform by is an [Infrastructure as Code](Infrastructure%20as%20Code.md) tool 
 
 ### Terraform Architecture
 
-![](https://patfolio-assets.s3.ap-south-1.amazonaws.com/Terraform-Architecture.png)
+
 
 1. **Terraform Configuration Files (.tf)**
     - Configuration files are written in *HashiCorp Configuration Language (HCL)* which is similar to JSON.
