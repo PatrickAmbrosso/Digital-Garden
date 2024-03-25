@@ -90,7 +90,7 @@ export const defaultContentPageLayout: PageLayout = {
       },
       order: ["filter", "map", "sort"],
     })),
-    Component.Backlinks(),
+    Component.DesktopOnly(Component.Backlinks()),
   ],
   right: [
     Component.Graph(),
@@ -173,7 +173,7 @@ export const defaultListPageLayout: PageLayout = {
       },
       order: ["filter", "map", "sort"],
     })),
-    Component.Backlinks(),
+    Component.DesktopOnly(Component.Backlinks()),
   ],
   right: [
     Component.Graph(),
