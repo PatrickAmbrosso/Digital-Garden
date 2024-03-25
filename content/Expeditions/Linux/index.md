@@ -24,7 +24,7 @@ publish: true
 	- [Basic Linux Commands and Utilities](./02%20Getting%20Started%20with%20Linux.md#Basic%20Linux%20Commands%20and%20Utilities) - Covers essential commands and utilities for performing common tasks in the Linux terminal.
 	- [Managing Users and Permissions](./02%20Getting%20Started%20with%20Linux.md#Managing%20Users%20and%20Permissions) - Explains how to create and manage user accounts and set permissions for files and directories.
 - [Working with Different Linux Distributions](Working%20with%20Different%20Linux%20Distributions.md)
-	- [Linux comes in Distributions](Linux%20comes%20in%20Distributions.md) - Discusses about Linux Distributions, they why and the purpose for such an approach. 
+	- [Linux comes in Distributions](../../../Linux%20comes%20in%20Distributions.md) - Discusses about Linux Distributions, they why and the purpose for such an approach. 
 	- [Overview of Popular Linux Distributions](Overview%20of%20Popular%20Linux%20Distributions.md) - Provides an overview of popular Linux distributions, including their characteristics and use cases.
 	- [Understanding the Major Families of Distros](Understanding%20the%20Major%20Families%20of%20Distros.md) - Discusses the differences between major families of Linux distributions, such as Debian-based and Red Hat-based distributions.
 	- [Choosing the Right Distribution for Your Needs](Choosing%20the%20Right%20Distribution%20for%20Your%20Needs.md) - Offers guidance on selecting the most suitable Linux distribution based on specific requirements and preferences.
