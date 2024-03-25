@@ -35,7 +35,7 @@ OpenSSH is actively maintained and developed by a team of dedicated contributors
 - Why SSH over other ways
 - Difference between SSH1 and SSH2
 
-### Architecture & Components
+### Components of SSH
 
 - Components of an SSH connection
 
@@ -65,11 +65,11 @@ OpenSSH is actively maintained and developed by a team of dedicated contributors
 - Set up SSH logs monitoring
 - Keeping the software and config up to date
 
-### Copy Files with SCP and SFTP
+### Copy Files with SCP & SFTP
 
 - Securely copy files with SCP and SFTP
 
-### Forwarding and Proxy Management
+### Forwarding and Proxy
 
 - Securely forward SSH connections to remote machines
 - Security implications and best practices of forwarding
@@ -80,9 +80,9 @@ OpenSSH is actively maintained and developed by a team of dedicated contributors
 - Understanding certificate authorities (CA) and how to issue SSH certs
 - Use SSH certificates for centralized key management
 
-### Compliance & Regulatory Requirements
+### Regulatory Compliance
 
-## Common SSH Workflows
+## Common Workflows
 
 1. SSH into Linux from Linux - Create an SSH Key and Connect to a Linux Machine from a Linux Machine
 2. SSH into Linux from Windows PowerShell - Create an SSH Key and Connect
@@ -90,7 +90,7 @@ OpenSSH is actively maintained and developed by a team of dedicated contributors
 4. Setting up SSH in Azure VMs
 5. Setting up SSH for Ansible Automation
 
-## Common SSH Troubleshooting
+## Troubleshooting FAQs
 
 1. Connection Time Out Error
 2. Access Denied Error
