@@ -187,6 +187,8 @@ ssh-keygen -t ed25519
 ssh-keygen -t ed25519 -C "Comment on Key"
 ```
 
+![](https://patfolio-assets.s3.ap-south-1.amazonaws.com/ssh-keygen.gif)
+
 The `-C` flag can be used to supply a comment for the Key. This can be useful in identifying the purpose of why the key was generated.
 
 The following table summarizes the different encryption algorithms.
