@@ -101,7 +101,6 @@ OpenSSH is actively maintained and developed by a team of dedicated contributors
 2. GitHub Account - [OpenSSH on GitHub](https://github.com/openssh)
 3. Reddit SSH Community - [r/ssh](https://www.reddit.com/r/ssh/)
 
----
 %% SSH Architecture and Components
 Understanding the architecture and components of SSH helps in comprehending how SSH connections are established, authenticated, and secured. It forms the basis for configuring and managing SSH connections, key pairs, and authentication methods.
 1. **SSH Client** - The SSH client is the software or tool used by the user to initiate a secure connection to the remote server. It allows the user to authenticate themselves and interact with the server. Common SSH clients include OpenSSH (command-line tool), PuTTY (Windows-based client), and Bitvise SSH Client.
