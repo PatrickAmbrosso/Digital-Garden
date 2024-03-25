@@ -16,6 +16,6 @@ Knowledge sharing, insights, and reflections derived from your learning experien
 - [Kubernetes](./Expeditions/Kubernetes/index.md)
 - [Linux](./Expeditions/Linux/index.md)
 - [Open Source](./Expeditions/Open%20Source/index.md)
-- [Terraform](Terraform.md)
+- [Terraform](./Expeditions/Terraform/index.md)
 
 
