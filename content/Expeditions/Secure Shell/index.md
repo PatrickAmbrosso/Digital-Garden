@@ -89,7 +89,7 @@ The SSH architecture is composed of two main components
     - When a client initiates an SSH connection, it establishes a secure communication channel with the server, authenticates the user, and manages the encrypted session.
     - Examples of SSH client software include OpenSSH (ssh command-line tool), PuTTY, and Bitvise SSH Client.
 
-### How does SSH work?
+#### How does SSH work?
 
 Here is a quick rundown of a typical SSH workflow.
 
