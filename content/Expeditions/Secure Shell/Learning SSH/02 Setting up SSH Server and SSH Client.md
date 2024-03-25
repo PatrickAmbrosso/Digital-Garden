@@ -54,6 +54,8 @@ The following are some of the authentication methods used with SSH
 
 SSH allows for configuring and enforcing authentication methods based on security requirements and user preferences. The choice of authentication method depends on the level of security desired, ease of use, and available infrastructure. Public key-based authentication is generally recommended for its strong security properties, while additional methods like two-factor authentication can provide extra layers of protection.
 
+Password-based authentication & Public Key-based authentication are the most common methods of setting up SSH fore remote machines. Hence this guide will go over these two methods.
+
 #### Password-based Authentication 
 The `ssh` command can be used to connect to the remote server. The command follows the general syntax as showcased below.
 
@@ -82,16 +84,22 @@ Following code snippet showcases the commonly used encryption algorithms used to
 ```bash
 # RSA
 ssh-keygen -t rsa -b 2048
+ssh-keygen -t rsa -b 2048 -C "Comment on Key"
 
 # DSA
 ssh-keygen -t dsa -b 2048
+ssh-keygen -t dsa -b 2048 -C "Comment on Key"
 
 # ECDSA
 ssh-keygen -t ecdsa -b 256
+ssh-keygen -t ecdsa -b 256 -C "Comment on Key"
 
 # ED25519
 ssh-keygen -t ed25519
+ssh-keygen -t ed25519 -C "Comment on Key"
 ```
+
+The `-C` flag can be used to supply a comment for the Key. This can be useful in identifying the purpose of why the key was generated.
 
 The following table summarizes the different encryption algorithms.
 
@@ -107,14 +115,41 @@ After generating the key-pair, the key pair needs to be moved to the SSH server.
 1. **Using `ssh-copy-id` command**
     - The `ssh-copy-id` command simplifies the process of copying the public key to the server.  
     - This command copies the public key to the remote server and adds it to the `authorized_keys` file in the user's home directory.
-2. Manual Copying:
+2. **Manual Copying**
     - If the `ssh-copy-id` command is not available or not suitable for your system, you can manually copy the public key to the server.
     - On the client machine, use a text editor or command-line tools to open the public key file (`~/.ssh/id_rsa.pub`, `~/.ssh/id_dsa.pub`, `~/.ssh/id_ecdsa.pub`, or `~/.ssh/id_ed25519.pub`).
     - Copy the contents of the public key file.
     - On the server, open the `~/.ssh/authorized_keys` file (create it if it doesn't exist) in a text editor.
     - Paste the copied public key into a new line in the `authorized_keys` file and save it.
-3. Secure File Transfer:
+3. **Secure File Transfer**
     - Use a secure file transfer method, such as SCP or SFTP, to transfer the public key file to the server.
     - Example using SCP:
         `scp ~/.ssh/id_rsa.pub username@server_ip:~/.ssh/authorized_keys`
-    - This command copies the public key file directly to the `authorized_keys` file on the server.
+    - This command copies the public key file directly to the `authorized_keys` file on the server
+
+```shell
+# Using the ssh-copy-id command
+ssh-copy-id -i <public-key-path> username@server_ip
+
+# Using Secure Copy (or) SCP
+
+# Step 1: Copy the public key to the remote machine
+scp <public-key-path> usernameo@server_ip:<path-on-target-machine>
+
+# Step 2: SSH into the server with password authentication
+ssh username@server_ip
+# Enter the password when prompted -> Should take to the home dir
+
+# Step 3: Ensure ~/.ssh/authorized_keys keys file exists
+touch ~/.ssh/authorized_keys
+
+# Step 4: Append the copied public key to the authorized_keys file
+cat <public-key-path> >> ~/.ssh/authorized_keys
+
+# Step 5: Ensure correct read,write permissions are set
+chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys
+# Here sudo is most likely not required, but if prompted use 'sudo'
+```
+
+That being said, one must almost always go with the `ssh-copy-id` route as it is clean, simple and gets the job done quickly. The other methods provide a way to perform the same action just in case somehow the `ssh-copy-id` command is unavailable.
+
