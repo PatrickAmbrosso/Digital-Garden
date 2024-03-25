@@ -23,7 +23,6 @@ Here are some *key features and characteristics* of the SSH protocol
 **OpenSSH** is an *open-source implementation of the SSH protocol* suite. It provides both the *server-side (sshd)* and *client-side (ssh)* components, offering secure remote login, encrypted file transfers, and secure tunneling capabilities. OpenSSH is the *most widely used* and commonly recommended implementation of SSH due to its security, reliability, and extensive feature set.
 
 OpenSSH is actively maintained and developed by a team of dedicated contributors. [Its source code is open and available for inspection](https://github.com/openssh), which allows for community involvement, code audits, and continuous improvement. Due to its security, flexibility, and wide adoption, OpenSSH has become the de facto standard for SSH implementations in many environments. It is extensively used by system administrators, network engineers, developers, and security-conscious individuals for secure remote administration and file transfer tasks.
-
 ## Get up and Running with SSH
 
 1. [Fundamentals of SSH](./Learning%20SSH/01%20Fundamentals%20of%20SSH.md) - The Basics, History of SSH

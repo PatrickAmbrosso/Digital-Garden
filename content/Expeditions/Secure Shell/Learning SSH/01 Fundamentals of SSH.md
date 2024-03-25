@@ -7,7 +7,6 @@ publish: true
 
 This section deals with the basics of the SSH Protocol, and specifically the OpenSSH implementation. Topics such as the history of SSH & OpenSSH, the components of an SSH environment and more.
 
-
 > [!info] Title
 > This guide uses SSH and OpenSSH interchangeably, as OpenSSH is the most widely used implementation of the SSH protocol, with its presence in almost all Unix-based operating systems and even on Windows.
 
