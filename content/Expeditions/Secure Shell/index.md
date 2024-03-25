@@ -28,9 +28,72 @@ OpenSSH is actively maintained and developed by a team of dedicated contributors
 1. [Fundamentals of SSH](./Learning%20SSH/01%20Fundamentals%20of%20SSH.md) - The Basics, History of SSH
 2. [Setting up SSH Server and SSH Client](./Learning%20SSH/02%20Setting%20up%20SSH%20Server%20and%20SSH%20Client.md) - Getting SSH installed on your Machine.
 
+### Fundamentals of SSH
+
+- Get to know the history of SSH
+- Understand SSH and its purpose
+- Why SSH over other ways
+- Difference between SSH1 and SSH2
+
+### Architecture & Components
+
+- Components of an SSH connection
+
+### SSH Authentication
+
+- SSH Authentication Methods
+	- Password Auth
+	- Public Key-Based Auth
+	- Multi-factor Auth
+
+### SSH Key Management
+
+- Generating SSH Key-Pairs
+- Copying Key-pairs to target machines
+- SSH Key rotation
+- Revoking compromised Keys 
+
+### SSH Configuration
+
+- Client side configurations via ssh_config
+- Server side configurations via sshd_config 
+
+### Security Hardening
+
+- Disable root login
+- Implement IP Whitelisting & firewall rules
+- Set up SSH logs monitoring
+- Keeping the software and config up to date
+
+### Copy Files with SCP and SFTP
+
+- Securely copy files with SCP and SFTP
+
+### Forwarding and Proxy Management
+
+- Securely forward SSH connections to remote machines
+- Security implications and best practices of forwarding
+- Working with Bastion Hosts (or) Jump Hosts
+
+### SSH Certificates
+
+- Understanding certificate authorities (CA) and how to issue SSH certs
+- Use SSH certificates for centralized key management
+
+### Compliance & Regulatory Requirements
+
 ## Common SSH Workflows
 
+1. SSH into Linux from Linux - Create an SSH Key and Connect to a Linux Machine from a Linux Machine
+2. SSH into Linux from Windows PowerShell - Create an SSH Key and Connect
+3. Setting up SSH in AWS EC2
+4. Setting up SSH in Azure VMs
+5. Setting up SSH for Ansible Automation
 
+## Common SSH Troubleshooting
+
+1. Connection Time Out Error
+2. Access Denied Error
 
 ## Resources
 
@@ -39,7 +102,7 @@ OpenSSH is actively maintained and developed by a team of dedicated contributors
 3. Reddit SSH Community - [r/ssh](https://www.reddit.com/r/ssh/)
 
 ---
-SSH Architecture and Components
+%% SSH Architecture and Components
 Understanding the architecture and components of SSH helps in comprehending how SSH connections are established, authenticated, and secured. It forms the basis for configuring and managing SSH connections, key pairs, and authentication methods.
 1. **SSH Client** - The SSH client is the software or tool used by the user to initiate a secure connection to the remote server. It allows the user to authenticate themselves and interact with the server. Common SSH clients include OpenSSH (command-line tool), PuTTY (Windows-based client), and Bitvise SSH Client.
 2. **SSH Server** - The SSH server is the software running on the remote system that accepts incoming SSH connections from clients. It authenticates users and provides access to the server's resources. OpenSSH is the most widely used SSH server implementation.
@@ -234,4 +297,4 @@ Section 9: SSH Alternatives and Additional Tools
 - Web-based SSH Clients
 - Session Recording and Audit Tools
 - Containerization and Orchestration
-```
+``` %%
