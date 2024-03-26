@@ -20,9 +20,6 @@ OpenSSH gained widespread adoption due to its *security*, *reliability*, and *cr
 
 ## Up and Running with SSH
 
-1. [Fundamentals of SSH](./Learning%20SSH/01%20Fundamentals%20of%20SSH.md) - The Basics, History of SSH
-2. [Setting up SSH Server and SSH Client](./Learning%20SSH/02%20Setting%20up%20SSH%20Server%20and%20SSH%20Client.md) - Getting SSH installed on your Machine.
-
 ### Fundamentals of SSH
 
 #### The Purpose
@@ -93,16 +90,16 @@ The SSH architecture is composed of two main components
 
 Here is a quick rundown of a typical SSH workflow.
 
-1. **Initiation:** The client initiates an SSH connection by sending a connection request to the SSH server.
-2. **Server Identification:** The server responds by sending its identification string to the client, including the SSH version, encryption algorithms supported, and other parameters.
-3. **Key Exchange Initiation:** The client and server initiate a key exchange process to establish a secure communication channel. This involves negotiating encryption algorithms, key exchange methods, and other cryptographic parameters.
-4. **Key Generation:** During the key exchange, both the client and server generate session keys used for encrypting and decrypting data exchanged during the SSH session. This process typically involves using Diffie-Hellman key exchange or other key exchange algorithms to securely generate shared secret keys.
-5. **Client Authentication:** Once the key exchange is completed, the client authenticates itself to the server. This can be done using various authentication methods, such as password authentication, public key authentication, or multi-factor authentication (MFA). The client sends its authentication credentials to the server for verification.
-6. **Server Authentication:** After receiving the client's authentication credentials, the server verifies the client's identity. If the authentication is successful, the server sends a message confirming the authentication and proceeds to establish the secure connection.
-7. **Secure Connection Establishment:** With both client and server authenticated, the secure connection is established using the negotiated encryption algorithms and session keys. All data transmitted between the client and server is encrypted and integrity-checked, ensuring confidentiality and data integrity.
-8. **Session Management:** Once the secure connection is established, an SSH session is created, allowing the client to interact securely with the server. The session remains active until either the client or server terminates the connection.
-9. **Data Exchange:** During the SSH session, data exchanges occur securely between the client and server. This can include executing remote commands, transferring files (using SFTP or SCP), forwarding ports, or other interactions, all protected by the established secure connection.
-10. **Session Termination:** When the SSH session is complete, either the client or server terminates the connection, closing the secure communication channel and releasing resources allocated for the session.
+1. **Initiation** - The client initiates an SSH connection by sending a connection request to the SSH server.
+2. **Server Identification** - The server responds by sending its identification string to the client, including the SSH version, encryption algorithms supported, and other parameters.
+3. **Key Exchange Initiation** - The client and server initiate a key exchange process to establish a secure communication channel. This involves negotiating encryption algorithms, key exchange methods, and other cryptographic parameters.
+4. **Key Generation** - During the key exchange, both the client and server generate session keys used for encrypting and decrypting data exchanged during the SSH session. This process typically involves using Diffie-Hellman key exchange or other key exchange algorithms to securely generate shared secret keys.
+5. **Client Authentication** - Once the key exchange is completed, the client authenticates itself to the server. This can be done using various authentication methods, such as password authentication, public key authentication, or multi-factor authentication (MFA). The client sends its authentication credentials to the server for verification.
+6. **Server Authentication** - After receiving the client's authentication credentials, the server verifies the client's identity. If the authentication is successful, the server sends a message confirming the authentication and proceeds to establish the secure connection.
+7. **Secure Connection Establishment** - With both client and server authenticated, the secure connection is established using the negotiated encryption algorithms and session keys. All data transmitted between the client and server is encrypted and integrity-checked, ensuring confidentiality and data integrity.
+8. **Session Management** - Once the secure connection is established, an SSH session is created, allowing the client to interact securely with the server. The session remains active until either the client or server terminates the connection.
+9. **Data Exchange** - During the SSH session, data exchanges occur securely between the client and server. This can include executing remote commands, transferring files (using SFTP or SCP), forwarding ports, or other interactions, all protected by the established secure connection.
+10. **Session Termination** - When the SSH session is complete, either the client or server terminates the connection, closing the secure communication channel and releasing resources allocated for the session.
 
 ### SSH Authentication
 
@@ -127,8 +124,8 @@ The following are some of the authentication methods used with SSH
     - Similar to public key-based authentication, the user presents a client certificate instead of a private key.
     - The server verifies the authenticity of the certificate by checking its validity and the CA's signature.
     - Certificate-based authentication provides an extra layer of trust, as the CA validates the user's identity.
-5. **Two-factor Authentication (2FA)**
-    - Two-factor authentication combines multiple authentication factors to enhance security.
+5. **Multi-factor Authentication (2FA)**
+    - Multi-factor authentication combines multiple authentication factors to enhance security.
     - It typically involves *combining something the user knows* (e.g., a password) with *something the user has* (e.g., a mobile device or hardware token).
     - SSH servers can be configured to require both a password and a second factor, such as a one-time password generated by a mobile app or hardware token.
 
@@ -167,38 +164,50 @@ Public Key-based authentication uses an asymmetric key-pair to authenticate the 
 
 #### Generating SSH Key Pairs
 
-Following code snippet showcases the commonly used encryption algorithms used to generate a key-pair.
+SSH Key-Pairs can be generated with the use of the `ssh-keygen` command that comes as part of SSH. The `ssh-keygen` command can generate SSH keypairs with a variety of encryption algorithms, each with their pros, cons and use cases. Some of the most commonly used algorithms are
+1. **RSA** *(Rivest-Shamir-Adleman)* - RSA is a *widely used* asymmetric encryption algorithm. It offers *strong security and good performance*. RSA key pairs are compatible with almost all SSH clients and servers.
+2. **DSA** *(Digital Signature Algorithm)* - DSA is an *older asymmetric encryption algorithm*. It provides *strong security* but may have *slower performance* compared to RSA. DSA key pairs are compatible with most SSH clients and servers, but some implementations have *deprecated or limited support* for DSA.
+3. **ECDSA** *(Elliptic Curve Digital Signature Algorithm)* - ECDSA is an asymmetric encryption algorithm based on *elliptic curve cryptography*. It offers *strong security* with *shorter key lengths*, resulting in *improved performance*. ECDSA key pairs are supported by many modern SSH implementations.
+4. **Ed25519** - Ed25519 is a newer asymmetric encryption algorithm based on *elliptic curve cryptography*. It provides *strong security*, *excellent performance*, and *smaller key sizes* compared to RSA and DSA. Ed25519 key pairs are supported by many modern SSH implementations.
+
+The basic syntax for the `ssh-keygen` command is as follows.
+
+```shell
+# ssh-keygen command syntax
+ssh-keygen -t <encryption-algo> -b <key-bits> -C "Comment Here" -f ~/.ssh/name_of_key
+
+# -t & -b flags set they type of algorithm and encryption bits
+# -C flag is used to supply a comment
+# -f flag is used to supply the file path of the key to be generated
+# -N flag is used to pass the [optional] passphrase 
+```
+
+Following code snippet showcases the commonly used encryption algorithms and commands used to generate a key-pair.
 
 ```bash
 # RSA
 ssh-keygen -t rsa -b 2048
 ssh-keygen -t rsa -b 2048 -C "Comment on Key"
+ssh-keygen -t rsa -b 2048
+ssh-keygen -t rsa -b 2048 -C "Comment on Key" -f "~/.ssh/name_of_key"
 
 # DSA
 ssh-keygen -t dsa -b 2048
 ssh-keygen -t dsa -b 2048 -C "Comment on Key"
+ssh-keygen -t dsa -b 2048 -C "Comment on Key" -f "~/.ssh/name_of_key"
 
 # ECDSA
 ssh-keygen -t ecdsa -b 256
 ssh-keygen -t ecdsa -b 256 -C "Comment on Key"
+ssh-keygen -t ecdsa -b 256 -C "Comment on Key" -f "~/.ssh/name_of_key"
 
 # ED25519
 ssh-keygen -t ed25519
 ssh-keygen -t ed25519 -C "Comment on Key"
+ssh-keygen -t ed25519 -C "Comment on Key" -f "~/.ssh/name_of_key"
 ```
 
 ![](https://patfolio-assets.s3.ap-south-1.amazonaws.com/ssh-keygen.gif)
-
-The `-C` flag can be used to supply a comment for the Key. This can be useful in identifying the purpose of why the key was generated.
-
-The following table summarizes the different encryption algorithms.
-
-| Encryption Algorithm                                   | Description                                                                                                                                                                                                                                                                |
-| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **RSA** (Rivest-Shamir-Adleman)                        | RSA is a *widely used* asymmetric encryption algorithm. It offers *strong security and good performance*. RSA key pairs are compatible with almost all SSH clients and servers.                                                                                            |
-| **DSA** (Digital Signature Algorithm)                  | DSA is an *older asymmetric encryption algorithm*. It provides *strong security* but may have *slower performance* compared to RSA. DSA key pairs are compatible with most SSH clients and servers, but some implementations have *deprecated or limited support* for DSA. |
-| **ECDSA** (Elliptic Curve Digital Signature Algorithm) | ECDSA is an asymmetric encryption algorithm based on *elliptic curve cryptography*. It offers *strong security* with *shorter key lengths*, resulting in *improved performance*. ECDSA key pairs are supported by many modern SSH implementations.                         |
-| **Ed25519**                                            | Ed25519 is a newer asymmetric encryption algorithm based on *elliptic curve cryptography*. It provides *strong security*, *excellent performance*, and *smaller key sizes* compared to RSA and DSA. Ed25519 key pairs are supported by many modern SSH implementations.    |
 
 #### Copying Key-Pairs to Target Machines
 
