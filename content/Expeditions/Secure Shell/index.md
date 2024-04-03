@@ -57,16 +57,16 @@ OpenSSH is actively maintained and developed by a team of dedicated contributors
 	- SSH is based on open standards and protocols, such as the SSH protocol suite (SSH-2), ensuring interoperability and compatibility across different SSH implementations and software applications.
 	- This open nature promotes transparency, security, and collaborative development in the SSH ecosystem.
 
-#### Difference between SSH1 and SSH2
 
-| Feature        | SSH1                                                                                                                                           | SSH2                                                                                                                                                                      |
-|----------------|------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Security       | SSH1 has known vulnerabilities, such as weak key exchange algorithms and insufficient data integrity checks, making it susceptible to attacks. | SSH2 is more secure than SSH1, addressing vulnerabilities with improved security mechanisms.                                                                              |
-| Encryption     | SSH1 uses weaker encryption algorithms compared to SSH2.                                                                                       | SSH2 supports stronger encryption algorithms like AES (Advanced Encryption Standard), providing better confidentiality for data transmission.                             |
-| Key Exchange   | SSH1 uses weaker key exchange algorithms, which can be exploited by attackers.                                                                 | SSH2 uses more robust key exchange mechanisms, such as Diffie-Hellman key exchange, offering better security and protection against man-in-the-middle attacks.            |
-| Data Integrity | SSH1 has insufficient data integrity checks, making it susceptible to data tampering during transmission.                                      | SSH2 incorporates improved data integrity checks using algorithms like HMAC (Hash-based Message Authentication Code), ensuring the integrity of transmitted data.         |
-| Compatibility  | SSH1 may not be compatible with newer SSH2 implementations and standards.                                                                      | SSH2 is backward compatible with SSH1, allowing SSH2 clients and servers to communicate with SSH1 counterparts if necessary.                                              |
-| Usage          | SSH1 usage has decreased due to its vulnerabilities and weaker security compared to SSH2.                                                      | SSH2 has become the industry standard and is widely adopted for secure remote access, file transfer (SFTP), and tunneling purposes due to its enhanced security features. |
+> [!INFO] Why SSH2 over SSH1
+> When choosing between SSH version 2 (SSH2) and SSH version 1 (SSH1), it's crucial to understand the advantages of SSH2 over SSH1 for enhanced security and functionality.
+> 
+> - SSH2 uses stronger encryption algorithms (AES, 3DES, Blowfish) compared to SSH1.
+> - SSH2 provides better protection against man-in-the-middle attacks with advanced key exchange methods like Diffie-Hellman.
+> - SSH2 supports secure authentication mechanisms including public key, certificate-based, and keyboard-interactive authentication.
+> - SSH2 offers enhanced forwarding and tunneling capabilities for secure communication across networks and encapsulation of diverse protocols.
+> 
+> Choosing SSH2 over SSH1 is essential for stronger encryption, better protection against attacks, secure authentication mechanisms, and enhanced forwarding and tunneling capabilities. SSH2 provides a more secure and efficient remote access and file transfer environment, making it the preferred choice for secure communications.
 
 ### Components of SSH
 
