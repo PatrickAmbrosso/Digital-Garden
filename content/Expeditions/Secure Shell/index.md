@@ -103,14 +103,6 @@ Here is a quick rundown of a typical SSH workflow.
 9. **Data Exchange** - During the SSH session, data exchanges occur securely between the client and server. This can include executing remote commands, transferring files (using SFTP or SCP), forwarding ports, or other interactions, all protected by the established secure connection.
 10. **Session Termination** - When the SSH session is complete, either the client or server terminates the connection, closing the secure communication channel and releasing resources allocated for the session.
 
-```mermaid
-sequenceDiagram
-    participant A as SSH Client
-    participant B as SSH Server
-    A->>B: Hello John, how are you?
-    B->>A: Great!
-```
-
 ### SSH Authentication
 
 The following are some of the authentication methods used with SSH
