@@ -10,7 +10,7 @@ publish: true
 
 **SSH (pronounced ESS-ESS-HEICH)** stands for **Secure Shell**. It is a *cryptographic network protocol* that provides a *secure* and *encrypted* way to *access and manage remote devices* over an unsecured network, such as the internet. SSH allows users to securely log into remote systems and execute commands, transfer files, and perform other network services.
 
-In the early days of networked computing, protocols like Telnet and rlogin were commonly used for remote access to systems. However, these protocols transmitted data, including passwords, in plaintext, making them vulnerable to eavesdropping and unauthorized access.
+In the early days of networked computing, protocols like `telnet` and `rlogin` were commonly used for remote access to systems. However, these protocols transmitted data, including passwords, in plaintext, making them vulnerable to eavesdropping and unauthorized access.
 
 In *1995*, *Tatu Ylönen*, a *Finnish researcher*, developed the Secure Shell (SSH) protocol as a secure *alternative to Telnet and rlogin*. His goal was to create a secure method for remote login and encrypted communication between networked devices. Ylönen initially released the SSH protocol as a proprietary software solution. However, realizing the importance of open standards and collaboration, he encouraged the development of an open-source version.
 
@@ -79,11 +79,13 @@ The SSH architecture is composed of two main components
     - The SSH server is responsible for hosting the services and resources that clients can connect to securely. It runs on the remote machine that you want to access.
     - When a client initiates an SSH connection, the SSH server handles the authentication, encryption, and session management on the server-side.
     - The SSH server listens for incoming SSH connections on a specific port (default is port 22) and establishes secure communication channels with the client.
+    - Configurations for the SSH server can be typically found at `/etc/sshd/ssd_config`
     - Examples of SSH server software include OpenSSH, Microsoft OpenSSH, and Bitvise SSH Server.
 2. **SSH Client**
     - The SSH client is the software or tool used to initiate a connection to an SSH server. It runs on the local machine from which the remote server is accessed.
     - The SSH client provides the interface for users to authenticate, securely transmit commands and data, and interact with the remote server.
     - When a client initiates an SSH connection, it establishes a secure communication channel with the server, authenticates the user, and manages the encrypted session.
+    - Configurations for SSH Client for the user can be found at `~/.ssh/ssh_config` and for system-wide configurations, it is found at `/etc/ssh/ssh_config`.
     - Examples of SSH client software include OpenSSH (ssh command-line tool), PuTTY, and Bitvise SSH Client.
 
 #### How does SSH work?
@@ -100,6 +102,14 @@ Here is a quick rundown of a typical SSH workflow.
 8. **Session Management** - Once the secure connection is established, an SSH session is created, allowing the client to interact securely with the server. The session remains active until either the client or server terminates the connection.
 9. **Data Exchange** - During the SSH session, data exchanges occur securely between the client and server. This can include executing remote commands, transferring files (using SFTP or SCP), forwarding ports, or other interactions, all protected by the established secure connection.
 10. **Session Termination** - When the SSH session is complete, either the client or server terminates the connection, closing the secure communication channel and releasing resources allocated for the session.
+
+```mermaid
+sequenceDiagram
+    participant A as SSH Client
+    participant B as SSH Server
+    A->>B: Hello John, how are you?
+    B->>A: Great!
+```
 
 ### SSH Authentication
 
