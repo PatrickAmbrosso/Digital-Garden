@@ -29,12 +29,13 @@ The syntax of Golang is influenced by C, but it also includes features from othe
 
 ## Getting Started with Golang
 
-Golang is available on all major operating systems as [compiled binaries](https://go.dev/dl/). Golang can also be installed on the respective operating system via the package managers. It can also be built from the source with the instructions available [here](https://go.dev/doc/install/source). 
+### Installing Golang
 
+Golang is available on all major operating systems as [compiled binaries](https://go.dev/dl/). Golang can also be installed on the respective operating system via the package managers. It can also be built from the source with the instructions available [here](https://go.dev/doc/install/source). 
 
 > [!INFO]- Install Golang on Linux
 > 
-> **Step 1 : Remove previous Go installations** - remove any remnant installations of golang by deleting the `/usr/local/go` folder (if it exists) and then extract the archive just downloaded onto the folder `/usr/local/go`.
+> **Step 1: Remove previous Go installations** - remove any remnant installations of golang by deleting the `/usr/local/go` folder (if it exists) and then extract the archive just downloaded onto the folder `/usr/local/go`.
 > 
 > ```shell
 > rm -rf /usr/local/go && tar -C /usr/local -xzf \<downloaded-file>
@@ -59,7 +60,7 @@ Golang is available on all major operating systems as [compiled binaries](https:
 
 > [!INFO]- Install Golang on a Mac
 > 
-> **Step 1 : Just follow the prompts** - The package downloaded automatically installs golang on `usr/local/go` and then automatically add it to PATH. Restart terminal sessions for these updates to take effect
+> **Step 1: Just follow the prompts** - The package downloaded automatically installs golang on `usr/local/go` and then automatically add it to PATH. Restart terminal sessions for these updates to take effect.
 > 
 > **Step 2: Check Installation** - To check if golang has been properly installed on the system, run the following command which should print the version of go that has been installed
 > 
@@ -67,12 +68,11 @@ Golang is available on all major operating systems as [compiled binaries](https:
 > go version
 > ```
 
-
 > [!INFO]- Install Golang on Windows
 > 
 > **Option 1: MSI Installer**
 > 
-> **Step 1: Just follow the prompts** - The package downloaded automatically installs golang on `usr/local/go` and then automatically add it to PATH. Restart terminal sessions for these updates to take effect
+> **Step 1: Just follow the prompts** - The package downloaded automatically installs golang onto `Program Files (x86)` and then automatically add it to PATH. Restart terminal sessions for these updates to take effect.
 > 
 > **Step 2: Check Installation** - To check if golang has been properly installed on the system, run the following command which should print the version of go that has been installed
 > 
@@ -95,3 +95,98 @@ Golang is available on all major operating systems as [compiled binaries](https:
 > ```shell
 > choco install golang
 > ```
+
+It is recommended to use an IDE or a code editor when working with golang to make use of the linting, syntax highlighting and error prompting. [VS Code](https://code.visualstudio.com/) is a solid recommend for everyone and [neovim](https://neovim.io/) is a beautiful option if you are a masochist.
+
+### Initializing a Go Project
+
+Most golang projects start with a `go mod init` command run at the command line. This leads to the creation of a file called `go.mod`. 
+
+`go.mod` is a file that is used to track dependencies for the current go project. the following are some of the reasons why initializing a go module is considered best practice.
+
+1. **Dependency Management** - `go mod init` is essential for managing dependencies in a Golang project. The `go.mod` file created by `go mod init` command tracks the versions of dependencies used in the project and ensures that they are compatible with each other.
+2. **Versioning** - `go.mod` file assists in versioning of the code and its dependencies. This assists in easy sharing and reuse of the same code across teams and projects.
+3. **Portability** - `go.mod` file is self-contained, meaning that it can be moved to different environments and build systems.
+4. **Compatibility** - `go mod init` is designed to be backwards-compatible, meaning that it can be run on older Golang projects and it would still work without any issues.
+
+```go
+# General Syntax
+go mod init <project-name>
+```
+
+```go
+# Example init command
+go mod init hello-world
+```
+
+```go
+# Example init command with shared repo url
+go mod init github.com/org-name/project-name
+```
+### Running the first Go Program
+
+For the classic hello world program, in golang, it is written as follows
+
+```go
+package main
+
+import fmt
+
+func main() {
+
+	fmt.Println("Hello World. Shall we 'GO'?")
+
+}
+```
+
+Let's break this code down.
+- **What is `package main`?**
+	- `package main` is a declaration usually found in files named `main.go`.
+	- These are declarations that the go compiler uses to compile the files to an executable.
+	- It tells the compiler that this is intended to be an executable program and not a package that is intended to be imported into other programs.
+	- `package main` must be the first line of the code and the file must contain a `main` function.
+- **What are we importing?**
+	- The import statement is used to include code from other packages in the current program.
+	- When a package is imported, all the functions, types and variables exposed by the package will be available to use by the importing program.
+	- In the example provided above, the standard `fmt` package (part of golang standard library) is imported. `fmt` provides functions for formatting input and output.
+	- By best practice standards, it is not recommended to import packages that are not used by the program.
+- **The `main()` function**
+	- The go compiler begins to execute code at the main function (provided the program has a package main statement).
+	- This function is the entry point for code execution, where the code/program logic begins evaluation. 
+
+## The Basics of Golang
+
+### Getting Help
+
+### Commenting Code
+
+### Data Types and Variables
+
+### Basic I/O Operations
+
+### String Manipulation
+
+### Operators
+
+### Control Structures
+
+### Data Structures
+
+### Error Handling
+
+### Modules & Packages
+
+### Concurrency
+
+### Packaging and Deployment
+
+### Version Control
+
+### Testing and Debugging
+
+## Continuous Learning
+
+## Projects
+
+## Learning Resources
+
