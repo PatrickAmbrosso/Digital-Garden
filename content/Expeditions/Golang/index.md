@@ -26,3 +26,72 @@ The syntax of Golang is influenced by C, but it also includes features from othe
 5.  **Concurrency support** - Golang includes built-in support for concurrency through goroutines and channels. Goroutines are lightweight threads that allow for parallel execution of code, while channels provide a safe and efficient way to share data between concurrent processes.
 6.  **Garbage collection** - Golang includes a garbage collector that automatically manages memory, freeing developers from having to worry about manual memory management.
 7.  **Error handling** - Golang includes a built-in error handling system, which makes it easy to handle and propagate errors throughout a program.
+
+## Getting Started with Golang
+
+Golang is available on all major operating systems as [compiled binaries](https://go.dev/dl/). Golang can also be installed on the respective operating system via the package managers. It can also be built from the source with the instructions available [here](https://go.dev/doc/install/source). 
+
+
+> [!INFO]- Install Golang on Linux
+> 
+> **Step 1 : Remove previous Go installations** - remove any remnant installations of golang by deleting the `/usr/local/go` folder (if it exists) and then extract the archive just downloaded onto the folder `/usr/local/go`.
+> 
+> ```shell
+> rm -rf /usr/local/go && tar -C /usr/local -xzf \<downloaded-file>
+> ```
+> This may require to run as `root` or with `sudo` privileges 
+>
+> Do not untar directly onto the existing `/usr/local/go` . This is known to produce broken installations
+> 
+> **Step 2: Add Go to PATH** - To add golang commands to path, add the file to the shell profile config file at `$HOME/.bashrc` (or similar for the shell of preference) or at `/etc/.bashrc` (or similar for the shell of preference).
+> 
+> ```shell
+> export PATH=$PATH:/usr/local/go/bin
+> ```
+> 
+> After adding to path, login to the terminal session once again to let the profile changes take effect
+> 
+> **Step 3: Check Installation** - To check if golang has been properly installed on the system, run the following command which should print the version of go that has been installed
+> 
+> ```shell
+> go version
+> ```
+
+> [!INFO]- Install Golang on a Mac
+> 
+> **Step 1 : Just follow the prompts** - The package downloaded automatically installs golang on `usr/local/go` and then automatically add it to PATH. Restart terminal sessions for these updates to take effect
+> 
+> **Step 2: Check Installation** - To check if golang has been properly installed on the system, run the following command which should print the version of go that has been installed
+> 
+> ```shell
+> go version
+> ```
+
+
+> [!INFO]- Install Golang on Windows
+> 
+> **Option 1: MSI Installer**
+> 
+> **Step 1: Just follow the prompts** - The package downloaded automatically installs golang on `usr/local/go` and then automatically add it to PATH. Restart terminal sessions for these updates to take effect
+> 
+> **Step 2: Check Installation** - To check if golang has been properly installed on the system, run the following command which should print the version of go that has been installed
+> 
+> ```shell
+> go version
+> ```
+> 
+> **Option 2: Using Package Managers**
+> 
+> **Step 1: Choose what suits you** - Select between [Scoop](https://scoop.sh) or [Chocolatey](https://chocolatey.org/) as the package manager and search the respective repositories to download the latest binary release.
+> 
+> Using the Scoop Package Manager
+>
+> ```shell
+> scoop install main/go
+> ```
+>
+> Using the Chocolatey Package Manager
+>
+> ```shell
+> choco install golang
+> ```
